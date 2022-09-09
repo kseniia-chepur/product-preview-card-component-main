@@ -30,11 +30,24 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 p-0">
-          <img
-            class="img-fluid"
-            src="./images/image-product-desktop.jpg"
-            alt="product"
-          />
+          <picture>
+            <source
+              class="img-fluid"
+              media="(max-width: 376px)"
+              srcset="./images/image-product-mobile.jpg"
+            />
+            <source
+              class="img-fluid"
+              media="(min-width: 376px)"
+              srcset="./images/image-product-desktop.jpg"
+            />
+            <img
+              class="img-fluid"
+              src="./images/image-product-desktop.jpg"
+              alt="product picture"
+            />
+          </picture>
+        
         </div>
         <div class="col-sm-6 p-4">
           <small>perfume</small>
@@ -52,7 +65,6 @@
         </div>
       </div>
     </div>
-
     <div class="attribution mt-2">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

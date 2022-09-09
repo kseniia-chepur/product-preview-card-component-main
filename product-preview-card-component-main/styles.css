@@ -1,11 +1,13 @@
 :root {
-  --accent-font: font-family: 'Fraunces', serif;
+  --accent-font: "Fraunces", serif;
+  --primary-color: hsl(212, 21%, 14%);
   --accent-color: hsl(158, 36%, 37%);
 }
 
 body {
-  background: hsl(30, 38%, 92%);
   font-family: "Montserrat", sans-serif;
+  background: hsl(30, 38%, 92%);
+  color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +16,7 @@ body {
 }
 
 h1 {
-  font-family: "Fraunces", serif;
+  font-family: var(--accent-font);
   font-size: 34px;
   line-height: 1;
 }
@@ -33,25 +35,24 @@ small {
 
 img {
   border-top-left-radius: 8px;
-   border-bottom-left-radius: 8px;  
+  border-bottom-left-radius: 8px;
 }
 
-.container{
+.container {
   background: hsl(0, 0%, 100%);
-  max-width: 580px;
+  max-width: 586px;
   border-radius: 8px;
 }
 
 .price {
-  font-family: "Fraunces", serif;
+  font-family: var(--accent-font);
   font-size: 34px;
   color: var(--accent-color);
 }
 
 .price span {
-  font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  color: #000;
+  color: var(--primary-color);
   position: relative;
   bottom: 6px;
   opacity: 0.6;
@@ -79,6 +80,23 @@ img {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: var(--accent-color);
+}
+
+.attribution a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 376px) {
+  .container {
+    max-width: 350px;
+    margin: 20px 0;
+  }
+
+  img {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 8px;
+  }
 }
